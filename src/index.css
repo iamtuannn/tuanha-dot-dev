@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Khand:wght@400;600&family=Yanone+Kaffeesatz:wght@400;600&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html,
+  body {
+    @apply text-white font-yanone-kaffeesatz bg-dark-blue-magenta border-white-300;
+  }
+  body::-webkit-scrollbar {
+    @apply hidden;
+  }
+  p {
+    @apply text-[1.2rem] md:text-[1.5rem];
+  }
+
+  .box{
+    @apply w-[85%] lg:w-[70%] max-w-[1024px]
+  }
+
+  .p-auto {
+    @apply p-3 lg:p-6 2xl:p-12 pt-3;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .text-list {
+    @apply before:content-['-'] before:mr-2 mb-4 last:mb-0;
+  }
 }
