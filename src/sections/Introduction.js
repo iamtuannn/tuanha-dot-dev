@@ -51,13 +51,11 @@ export default function Introduction(props) {
                 I enjoy learning everything about Front-end and Back-end
                 technologies
               </p>
-              <a
-                className="m-2"
-                href="/public/HoangAnhTuan_Fresher_ReactJS.pdf"
-                download="HoangAnhTuan_Fresher_ReactJS.pdf"
-              >
-                <Button content="Download Resume" />
-              </a>
+              <div className="mt-4">
+                <a href="/public/HoangAnhTuan_Fresher_ReactJS.pdf" download>
+                  <Button content="Download Resume" />
+                </a>
+              </div>
             </div>
           </div>
           <div className=" rounded-full shadow-avatar flex-center h-[200px] w-[200px] 2xl:w-[300px] 2xl:h-[300px] mb-4 lg:mb-0">
