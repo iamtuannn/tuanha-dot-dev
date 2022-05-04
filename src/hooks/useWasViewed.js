@@ -3,13 +3,13 @@ import { useInView } from "react-intersection-observer";
 
 export const useWasViewed = () => {
   const [wasViewed, setWasViewed] = useState(false);
-  const { ref: setRef, inView } = useInView();
+  const { ref: setRef, inView: isInView } = useInView();
 
   useEffect(() => {
-    if (inView) {
+    if (isInView) {
       setWasViewed(true);
     }
-  }, [inView]);
+  }, [isInView]);
 
-  return { setRef, wasViewed };
+  return { setRef, wasViewed, isInView };
 };
