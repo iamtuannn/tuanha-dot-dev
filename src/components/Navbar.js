@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { displays } from "../utils/config";
 import { FaBars, FaPlus } from "react-icons/fa";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export default function Navbar() {
   const [showBar, setShowBar] = useState(false);
@@ -8,20 +9,16 @@ export default function Navbar() {
   const SwitchDisplay = (display) =>
     document.getElementById(display.id).scrollIntoView({ behavior: "smooth" });
 
-  useEffect(() => {
-    document.body.style.overflow = showBar ? "hidden" : "auto";
-  }, [showBar]);
+  const { isMobile } = useIsMobile(1023);
 
   useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth > 1024) {
-        setShowBar(false);
-      }
+    if (isMobile) {
+      document.body.style.overflow = showBar ? "hidden" : "auto";
+    } else {
+      setShowBar(false);
+      document.body.style.overflow = "auto";
     }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [showBar, isMobile]);
 
   const getNavLink = () => (
     <div className=" flex flex-col w-full h-[50vh] justify-around lg:flex-row lg:items-center lg:h-auto mt-[10vh] lg:mt-0">
@@ -31,7 +28,9 @@ export default function Navbar() {
           key={display.id}
           onClick={() => {
             SwitchDisplay(display);
-            setShowBar(!showBar);
+            if (isMobile) {
+              setShowBar(false);
+            }
           }}
         >
           {display.name}
