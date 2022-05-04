@@ -3,16 +3,8 @@ import Button from "./Button";
 import { useWasViewed } from "../hooks/useWasViewed";
 
 export default function MainProjectCard({ project }) {
-  const {
-    id,
-    background,
-    preview,
-    name,
-    description,
-    technologies,
-    website,
-    gitRepo,
-  } = project;
+  const { id, background, preview, name, description, technologies, website } =
+    project;
 
   const { setRef, wasViewed } = useWasViewed();
   const animation = wasViewed ? "animate-slide-in-bottom" : "";
@@ -44,13 +36,8 @@ export default function MainProjectCard({ project }) {
           ))}
         </div>
         <div className=" flex items-center justify-around mt-2">
-          {website !== null && (
-            <a href={gitRepo} target="_blank" rel="noopener noreferrer">
-              <Button type="View Source" />
-            </a>
-          )}
           <a href={website} target="_blank" rel="noopener noreferrer">
-            <Button type="Live Demo" />
+            <Button content="Live Demo" />
           </a>
         </div>
       </div>
