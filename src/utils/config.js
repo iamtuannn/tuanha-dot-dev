@@ -20,7 +20,6 @@ import svgHeroku from "../assets/skills/heroku.svg";
 
 import nemoCinema from "../assets/mainProjects/nemo-cinema.jpg";
 import nemoQuotes from "../assets/mainProjects/nemo-quotes.jpg";
-import nemoAPIv1 from "../assets/mainProjects/nemo-api-v1.png";
 import portfolio from "../assets/mainProjects/portfolio.jpg";
 
 import Introduction from "../sections/Introduction";
@@ -58,19 +57,18 @@ export const socialMediaIcons = [
 export const facts = [
   "I'm a fresher front-end developer",
   "I'm working on web development skills like JavaScript, ReactJS, NodeJS etc.",
-  "I'm learning everything about Frontend and Backend skills",
-  "Future Goals: Learn more skills",
-  "Future Goals: Learning to become a full-stack developer",
+  "I enjoy learning everything about Front-end and Back-end technologies",
+  "Future Goals: Learn more technologies and become a full-stack developer",
 ];
 
 export const abilities = [
-  "Good working experience in using JavaScript (ES6), HTML5, CSS3.",
+  "Experience in using JavaScript (ES6), HTML5, CSS3.",
   "Experience with ReactJS, Redux and Router.",
   "Responsive for a better user experience",
-  "Friendly with UI library/framework like: Bootstrap, Ant Design, Tailwind CSS...",
-  "Have experience in Git/GitHub.",
-  "Good logical thinking",
-  "Willing to learn and improve.",
+  "Have experience in Git",
+  "Be able to read and write English",
+  "Basic level of NodeJS with Express, MongoDB",
+  "Friendly with TailwindCSS, Ant Design, Styled components, Bootstrap.",
 ];
 
 export const skills = [
@@ -125,20 +123,20 @@ export const skills = [
   },
 ];
 
-export const mainProjects = [
+export const featured = [
   {
     id: 1,
     name: "Nemo Cinema",
     description: "Online Ticket Booking For Movies.",
     gitRepo: "https://github.com/tuanhngf/nemo-cinema",
-    website: "https://cinema.anhtuan.info/",
+    website: "https://cinema.anhtuan.info",
     preview: nemoCinema,
     completed: true,
     background: "rgba(70, 55, 51, 0.25)",
     technologies: [
       "ReactJS / Redux / React Router",
-      "Ant Design / Styled Components",
-      "Vercel",
+      "Styled Components",
+      "Ant Design",
     ],
   },
   {
@@ -146,37 +144,26 @@ export const mainProjects = [
     name: "Nemo Quotes",
     description: "A randomly generated quote every 15 seconds.",
     gitRepo: "https://github.com/tuanhngf/nemo-quotes",
-    website: "https://quotes.anhtuan.info/",
+    website: "https://quotes.anhtuan.info",
     preview: nemoQuotes,
     completed: true,
     background: "rgba(209, 176, 208, 0.25)",
     technologies: [
       "ReactJS / Redux / React Router",
-      "Ant Design / Styled Components",
-      "Vercel",
+      "Styled Components",
+      "Ant Design",
     ],
   },
   {
     id: 3,
-    name: "Nemo API v1.0 - Basic",
-    description: "API use for repository Nemo Cinema and Nemo Quotes.",
-    gitRepo: "https://github.com/tuanhngf/nemo-api-v1",
-    website: null,
-    preview: nemoAPIv1,
-    completed: true,
-    background: "rgba(12, 116, 117, 0.25)",
-    technologies: ["Express JS", "Mongoose", "Heroku"],
-  },
-  {
-    id: 4,
     name: "My Portfolio",
-    description: "Some information about me and mainProjects was built by me",
+    description: "Some information about me and projects was built by me",
     gitRepo: "https://github.com/tuanhngf/anhtuan-dot-info",
-    website: "https://www.anhtuan.info/",
+    website: "https://www.anhtuan.info",
     preview: portfolio,
     completed: true,
     background: "rgba(102, 84, 128, 0.25)",
-    technologies: ["ReactJS", "Tailwind CSS", "Vercel"],
+    technologies: ["ReactJS", "Tailwind CSS"],
   },
 ];
 
@@ -197,7 +184,7 @@ export const displays = [
     component: MySkills,
   },
   {
-    id: "main-projects",
+    id: "projects",
     name: "Projects",
     component: MainProjects,
   },
