@@ -26,6 +26,7 @@ module.exports = {
         "light-speed": "light-speed 1.5s ease-out 0s both",
         "head-shake": "head-shake 3s ease-out 0s both",
         "fade-in": "fade-in 1s ease-in-out",
+        jelly: "jelly 1s ease-in-out",
       },
     },
     fontFamily: {
