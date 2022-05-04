@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 @layer components {
-  html,
-  body {
+  #portfolio {
     @apply text-white font-yanone-kaffeesatz bg-dark-blue-magenta border-white-300;
   }
   body::-webkit-scrollbar {
@@ -16,8 +15,8 @@
     @apply text-[1.2rem] md:text-[1.5rem];
   }
 
-  .box{
-    @apply w-[85%] lg:w-[70%] max-w-[1024px]
+  .box {
+    @apply w-[85%] lg:w-[70%] max-w-[1024px];
   }
 
   .p-auto {

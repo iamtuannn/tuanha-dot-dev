@@ -4,7 +4,7 @@ import { displays } from "../utils/config";
 
 export default function Home() {
   return (
-    <>
+    <div id="portfolio">
       {displays.map((display) => (
         <display.component
           id={display.id}
@@ -12,7 +12,7 @@ export default function Home() {
           key={display.id}
         />
       ))}
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 }
