@@ -1,29 +1,33 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Typical from "react-typical";
 import tuanha from "../assets/tuanha.jpg";
 import wave from "../assets/footer.png";
-import SocialMedia from "../components/SocialMedia";
 import ScrollUp from "../components/ScrollUp";
-import { useInView } from "react-intersection-observer";
 import Navbar from "../components/Navbar";
 import { useWasViewed } from "../hooks/useWasViewed";
+import Button from "../components/Button";
 
 export default function Introduction(props) {
-  const { ref, inView } = useInView();
   const { setRef, wasViewed } = useWasViewed();
   const animation = wasViewed ? "animate-slide-in-bottom" : "null";
 
+  const { setRef: refIntro, isInView: introInView } = useWasViewed();
+
   return (
     <div className=" bg-home">
-      <Navbar />
+      {useMemo(
+        () => (
+          <Navbar />
+        ),
+        []
+      )}
       <div
         className=" p-auto flex flex-col justify-center items-center"
-        ref={ref}
+        ref={refIntro}
         id={props.id || ""}
       >
         <div className=" flex flex-col-reverse lg:grid lg:gap-12 lg:grid-cols-[1fr_200px] 2xl:gap-20 2xl:grid-cols-[1fr_300px] max-w-[1024px] w-[80%] items-center">
           <div className=" text-center">
-            <SocialMedia />
             <div ref={setRef} className={animation}>
               <h3 className=" my-4 text-xl lg:text-2xl 2xl:text-3xl">
                 Hi ! My name's{" "}
@@ -47,6 +51,13 @@ export default function Introduction(props) {
                 I enjoy learning everything about Front-end and Back-end
                 technologies
               </p>
+              <a
+                className="m-2"
+                href="/public/HoangAnhTuan_Fresher_ReactJS.pdf"
+                download="HoangAnhTuan_Fresher_ReactJS.pdf"
+              >
+                <Button content="Download Resume" />
+              </a>
             </div>
           </div>
           <div className=" rounded-full shadow-avatar flex-center h-[200px] w-[200px] 2xl:w-[300px] 2xl:h-[300px] mb-4 lg:mb-0">
@@ -59,7 +70,7 @@ export default function Introduction(props) {
         </div>
       </div>
       <img src={wave} alt="wave" className=" h-[130px] w-screen align-middle" />
-      <ScrollUp visible={!inView} />
+      <ScrollUp visible={!introInView} />
     </div>
   );
 }
