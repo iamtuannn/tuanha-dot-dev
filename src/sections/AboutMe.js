@@ -13,7 +13,7 @@ export default function AboutMe(props) {
         <Heading text="About Me" />
         <div className=" flex w-full bg-box rounded-2xl shadow-primary overflow-hidden">
           <div
-            className=" hidden xl:block min-w-[300px] bg-cover bg-no-repeat bg-center cursor-pointer min-h-[400px] overflow-hidden duration-[2s] ease-in bg-cybersoft"
+            className=" hidden xl:block min-w-[240px] bg-cover bg-no-repeat bg-center cursor-pointer min-h-[320px] overflow-hidden duration-[2s] ease-in bg-cybersoft"
             style={{
               backgroundImage: `url(${cybersoft})`,
               filter: blur ? "blur(8px)" : "none",
