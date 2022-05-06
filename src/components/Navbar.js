@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { displays } from "../utils/config";
 import { FaBars, FaPlus } from "react-icons/fa";
-import { useIsMobile } from "../hooks/useIsMobile";
+import { useViewport } from "../hooks/useViewport";
 
 export default function Navbar() {
   const [showBar, setShowBar] = useState(false);
@@ -9,7 +9,7 @@ export default function Navbar() {
   const SwitchDisplay = (display) =>
     document.getElementById(display.id).scrollIntoView({ behavior: "smooth" });
 
-  const { isMobile } = useIsMobile(1023);
+  const { isMobile } = useViewport(1023);
 
   useEffect(() => {
     if (isMobile) {
