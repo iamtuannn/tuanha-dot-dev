@@ -52,7 +52,7 @@ export default function Introduction(props) {
                 technologies
               </p>
               <div className="mt-4">
-                <a href="/public/HoangAnhTuan_Fresher_ReactJS.pdf" download>
+                <a href="/HoangAnhTuan_Fresher_ReactJS.pdf" download>
                   <Button content="Download Resume" />
                 </a>
               </div>
