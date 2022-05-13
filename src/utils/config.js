@@ -27,6 +27,10 @@ import AboutMe from "../sections/AboutMe";
 import MySkills from "../sections/MySkills";
 import MainProjects from "../sections/MainProjects";
 
+import toDoApp from "../assets/miniProjects/to-do-app.png";
+import passwordGenerator from "../assets/miniProjects/password-generator.png";
+import githubProfiles from "../assets/miniProjects/github-profiles.png";
+
 export const socialMediaIcons = [
   {
     name: "facebook",
@@ -187,5 +191,19 @@ export const displays = [
     id: "projects",
     name: "Projects",
     component: MainProjects,
+  },
+];
+
+export const miniProjects = [
+  { name: "To Do App", website: "https://todo.anhtuan.info", preview: toDoApp },
+  {
+    name: "Github Profiles",
+    website: "https://githubprofiles.anhtuan.info",
+    preview: githubProfiles,
+  },
+  {
+    name: "Password Generator",
+    website: "https://passwordsgenerator.anhtuan.info",
+    preview: passwordGenerator,
   },
 ];
