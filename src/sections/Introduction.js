@@ -15,9 +15,9 @@ export default function Introduction(props) {
 
   const { textValue: typedText } = useTypewriter({
     targetText: "I'm a fresher ReactJS Developer",
-    autoStartDelay: 500,
+    autoStartDelay: 1000,
     typingDelayMillis: 50,
-    loopDelay: 5000,
+    loopDelay: 2000,
     loop: true,
   });
 
