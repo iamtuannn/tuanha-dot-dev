@@ -16,7 +16,7 @@ import svgTailwind from "../assets/skills/tailwind.svg";
 import svgStyledComponents from "../assets/skills/styled-components.svg";
 import svgMongoDB from "../assets/skills/mongodb.svg";
 import svgVercel from "../assets/skills/vercel.svg";
-import svgHeroku from "../assets/skills/heroku.svg";
+import svgNextjs from "../assets/skills/nextjs.svg";
 
 import nemoCinema from "../assets/mainProjects/nemo-cinema.jpg";
 import nemoQuotes from "../assets/mainProjects/nemo-quotes.jpg";
@@ -26,10 +26,6 @@ import Introduction from "../sections/Introduction";
 import AboutMe from "../sections/AboutMe";
 import MySkills from "../sections/MySkills";
 import MainProjects from "../sections/MainProjects";
-
-import toDoApp from "../assets/miniProjects/to-do-app.png";
-import passwordGenerator from "../assets/miniProjects/password-generator.png";
-import githubProfiles from "../assets/miniProjects/github-profiles.png";
 
 export const socialMediaIcons = [
   {
@@ -71,7 +67,7 @@ export const abilities = [
   "Responsive for a better user experience",
   "Have experience in Git",
   "Be able to read and write English",
-  "Basic level of NodeJS with Express, MongoDB",
+  "Basic level with Express, MongoDB, Next.js",
   "Friendly with TailwindCSS, Ant Design, Styled components, Bootstrap.",
 ];
 
@@ -89,7 +85,7 @@ export const skills = [
     icon: svgJS,
   },
   {
-    name: "React JS",
+    name: "React",
     icon: svgReact,
   },
   {
@@ -118,12 +114,22 @@ export const skills = [
     icon: svgMongoDB,
   },
   {
-    name: "Heroku",
-    icon: svgHeroku,
+    name: "Next.js",
+    icon: svgNextjs,
+    color: {
+      /* fill: #F2F2F2; */
+      filter:
+        "invert(99%) sepia(1%) saturate(1093%) hue-rotate(207deg) brightness(117%) contrast(90%)",
+    },
   },
   {
     name: "Vercel",
     icon: svgVercel,
+    color: {
+      /* fill: #F2F2F2; */
+      filter:
+        "invert(99%) sepia(1%) saturate(1093%) hue-rotate(207deg) brightness(117%) contrast(90%)",
+    },
   },
 ];
 
@@ -191,19 +197,5 @@ export const displays = [
     id: "projects",
     name: "Projects",
     component: MainProjects,
-  },
-];
-
-export const miniProjects = [
-  { name: "To Do App", website: "https://todo.anhtuan.info", preview: toDoApp },
-  {
-    name: "Github Profiles",
-    website: "https://githubprofiles.anhtuan.info",
-    preview: githubProfiles,
-  },
-  {
-    name: "Password Generator",
-    website: "https://passwordsgenerator.anhtuan.info",
-    preview: passwordGenerator,
   },
 ];
