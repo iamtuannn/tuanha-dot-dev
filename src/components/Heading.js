@@ -3,7 +3,7 @@ import { useWasViewed } from "../hooks/useWasViewed";
 
 export default function Heading({ text }) {
   const { setRef, wasViewed } = useWasViewed();
-  const animation = wasViewed ? "animate-light-speed" : "null";
+  const animation = wasViewed ? "animate-jelly" : "null";
   
   return (
     <div className=" flex-center w-full mb-12 flex-col" ref={setRef}>

@@ -3,7 +3,7 @@ import { useWasViewed } from "../hooks/useWasViewed";
 
 export default function Highlight({ highlight, isLink = false }) {
   const { setRef, wasViewed } = useWasViewed();
-  const animation = wasViewed ? "animate-bounce-in-bottom" : "null";
+  const animation = wasViewed ? "animate-base" : "null";
 
   if (isLink) {
     return (

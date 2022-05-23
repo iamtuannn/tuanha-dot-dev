@@ -9,7 +9,7 @@ import Button from "../components/Button";
 
 export default function Introduction(props) {
   const { setRef, wasViewed } = useWasViewed();
-  const animation = wasViewed ? "animate-slide-in-bottom" : "null";
+  const animation = wasViewed ? "animate-base" : "null";
 
   const { setRef: refIntro, isInView: introInView } = useWasViewed();
 

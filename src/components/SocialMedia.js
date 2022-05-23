@@ -4,7 +4,7 @@ import { useWasViewed } from "../hooks/useWasViewed";
 
 export default function SocialMedia() {
   const { setRef, wasViewed } = useWasViewed();
-  const animation = wasViewed ? "animate-slide-in-left" : "null";
+  const animation = wasViewed ? "animate-base" : "null";
 
   return (
     <div className={` flex-center ${animation}`} ref={setRef}>

@@ -7,7 +7,7 @@ export default function MainProjectCard({ project }) {
     project;
 
   const { setRef, wasViewed } = useWasViewed();
-  const animation = wasViewed ? "animate-slide-in-bottom" : "";
+  const animation = wasViewed ? "animate-base" : "";
 
   return (
     <div
