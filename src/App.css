@@ -10,6 +10,14 @@
   -webkit-background-clip: text;
 }
 
+.use-typewriter-hook:after {
+  content: "";
+  border-right: 4px solid rgb(94, 114, 235);
+  animation: fade-in 0.5s 0s infinite normal;
+  animation-direction: alternate;
+  margin-left: 1rem;
+}
+
 @keyframes zoom-in {
   0% {
     opacity: 0;

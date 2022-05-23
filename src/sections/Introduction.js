@@ -1,17 +1,25 @@
 import React, { useMemo } from "react";
-import Typical from "react-typical";
 import tuanha from "../assets/tuanha.jpg";
 import wave from "../assets/footer.png";
 import ScrollUp from "../components/ScrollUp";
 import Navbar from "../components/Navbar";
 import { useWasViewed } from "../hooks/useWasViewed";
 import Button from "../components/Button";
+import { useTypewriter } from "use-typewriter-hook";
 
 export default function Introduction(props) {
   const { setRef, wasViewed } = useWasViewed();
   const animation = wasViewed ? "animate-base" : "null";
 
   const { setRef: refIntro, isInView: introInView } = useWasViewed();
+
+  const { textValue: typedText } = useTypewriter({
+    targetText: "I'm a fresher ReactJS Developer",
+    autoStartDelay: 500,
+    typingDelayMillis: 50,
+    loopDelay: 5000,
+    loop: true,
+  });
 
   return (
     <div className=" bg-home">
@@ -29,23 +37,15 @@ export default function Introduction(props) {
         <div className=" flex flex-col-reverse lg:grid lg:gap-12 lg:grid-cols-[1fr_200px] 2xl:gap-20 2xl:grid-cols-[1fr_300px] max-w-[1024px] w-[80%] items-center">
           <div className=" text-center">
             <div ref={setRef} className={animation}>
-              <h3 className=" my-4 text-xl lg:text-2xl 2xl:text-3xl">
+              <h3 className=" mt-4 text-xl lg:text-2xl 2xl:text-3xl">
                 Hi ! My name's{" "}
                 <span className=" text-pastel-pink font-khand font-semibold">
                   Anh Tuan
                 </span>
               </h3>
-              <div className=" text-xl lg:text-2xl 2xl:text-3xl">
-                <Typical
-                  steps={[
-                    "I'm a Web Developer",
-                    2000,
-                    "Fresher ReactJS Developer",
-                    2000,
-                  ]}
-                  loop={Infinity}
-                  wrapper="span"
-                />
+
+              <div className="text-lg md:text-xl xl:text-2xl min-h-[32px] md:min-h-[48px] xl:min-h-[60px] use-typewriter-hook">
+                {typedText}
               </div>
               <p>
                 I enjoy learning everything about Front-end and Back-end
